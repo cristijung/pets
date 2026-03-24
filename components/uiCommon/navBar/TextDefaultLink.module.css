@@ -1,4 +1,42 @@
 
-.text {
-    color: #88c;
+.link {
+  text-decoration: none;  
+  color: #ff007f; 
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border-radius: 8px;
+  display: inline-block;
 }
+
+.link:hover {  
+  color: #ffffff;  
+  background: linear-gradient(45deg, #ff007f, #ff8c00);
+  box-shadow: 0 4px 15px rgba(255, 0, 127, 0.3);
+}
+
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 0;
+  height: 2px; 
+  background: #ff8c00; 
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.link:hover::after {
+  width: 60%;
+  background: #ffffff; 
+}
+
+
+.active {
+  color: #f5a23d !important; 
+}
+

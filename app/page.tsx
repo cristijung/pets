@@ -6,7 +6,7 @@ export default function Home() {
    
     <h1>HomePets</h1>
     <p> Seja Bem Vindo </p>
-    <hr/>
+   
       
     </>
   );

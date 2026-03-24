@@ -1,4 +1,7 @@
+"use client"; 
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import styles from './TextDefaultLink.module.css';
 
 interface TextDefaultProps {
@@ -7,9 +10,15 @@ interface TextDefaultProps {
 }
 
 export default function TextDefaultLink({ children, to }: TextDefaultProps) {
-    return(
-        <>
-        <Link href={to} className={styles.text}>{children}</Link>        
-        </>       
-    )
+    const pathname = usePathname();
+    const isActive = pathname === to;
+
+    return (
+        <Link 
+            href={to} 
+            className={`${styles.text} ${isActive ? styles.active : ''}`}
+        >
+            {children}
+        </Link>
+    );
 }
