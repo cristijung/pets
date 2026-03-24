@@ -4,7 +4,7 @@ export default function Consultas() {
 
     return(
         <>
-        Consultas
+        <div className="container">Consultas</div>
         </>
     );
 }

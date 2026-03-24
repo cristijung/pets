@@ -1,8 +1,7 @@
-
 export default function Adote() {
-    return(
-        <>
-        Adote
-        </>
-    );
+  return (
+    <>
+      <div className="container">Adote</div>
+    </>
+  );
 }

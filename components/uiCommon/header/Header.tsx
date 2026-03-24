@@ -7,7 +7,6 @@ export default function Header() {
       <div className={styles.headerContainer}>
         {/* colocar 1 logo aqui */}
         <div className={styles.logoArea}>Ponto dos Pets</div>
-
         <NavBar />
       </div>
     </header>

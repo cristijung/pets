@@ -2,7 +2,6 @@
 export default function Contato() {
     return(
         <>
-        Contato
-        </>
+        Contato<div className="container">Contato</div></>
     );
 }
