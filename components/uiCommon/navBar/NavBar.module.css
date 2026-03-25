@@ -1,22 +1,36 @@
-
 .navContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1.5rem 2rem;
-  background: rgba(15, 23, 42, 0.8); 
-  backdrop-filter: blur(10px); 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* REMOVIDO: background: rgba(15, 23, 42, 0.8); */
+  background: transparent; /* Deixa totalmente sem cor de fundo */
+  
+  /* Mantemos o blur apenas para legibilidade no scroll, 
+     mas você pode remover se quiser 100% limpo */
+  backdrop-filter: blur(5px); 
+  
+  /* REMOVIDA: a borda que marcava o fundo */
+  border-bottom: none; 
+  
   position: sticky;
   top: 0;
   z-index: 1000;
-  gap: 1rem;
+  gap: 2rem; /* Aumentei um pouco o espaçamento para ficar mais elegante */
+  transition: all 0.3s ease;
+}
+
+/* Opcional: Adiciona um fundo bem suave apenas quando o usuário rolar a página */
+/* Isso ajuda a manter a acessibilidade digital que você tanto preza! */
+.navContainer:not(:first-child) {
+  padding: 1rem 2rem;
 }
 
 @media (max-width: 768px) {
   .navContainer {
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 1rem;
   }
 }

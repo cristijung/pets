@@ -1,42 +1,45 @@
-
 .link {
   text-decoration: none;  
   color: #ff007f; 
   font-weight: 900;
   font-size: 1.2rem;
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 0.2rem; /* Reduzi o padding lateral já que não tem fundo para preencher */
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  border-radius: 8px;
   display: inline-block;
 }
 
 .link:hover {  
-  color: #ffffff;  
-  background: linear-gradient(45deg, #ff007f, #ff8c00);
-  box-shadow: 0 4px 15px rgba(255, 0, 127, 0.3);
+  /* Mantemos a cor rosa ou mudamos para o laranja no hover? 
+     Vou colocar o laranja para dar um contraste legal sem precisar de fundo */
+  color: #ff8c00; 
+  background: transparent; /* Garante que não haverá fundo */
+  box-shadow: none; /* Remove a sombra do hover anterior */
 }
-
 
 .link::after {
   content: '';
   position: absolute;
-  bottom: 4px;
+  bottom: -2px; /* Ajustado para ficar logo abaixo do texto */
   left: 50%;
   width: 0;
-  height: 2px; 
+  height: 3px; /* Um pouco mais espessa para destacar já que não tem fundo */
   background: #ff8c00; 
   transition: all 0.3s ease;
   transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .link:hover::after {
-  width: 60%;
-  background: #ffffff; 
+  width: 100%; /* A linha agora preenche toda a largura do texto no hover */
+  background: #ff8c00; 
 }
-
 
 .active {
   color: #f5a23d !important; 
 }
 
+/* Opcional: uma pequena animação de escala no hover para dar feedback visual */
+.link:hover {
+  transform: scale(1.05);
+}
