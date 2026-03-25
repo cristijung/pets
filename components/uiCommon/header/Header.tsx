@@ -9,7 +9,7 @@ export default function Header() {
       <div className={styles.headerContainer}>
         <Link href='/' className={styles.logoArea}>
         <Image src='/logo_sw.png' alt='Logo' width={180} height={50} priority quality={75}/>
-        <img src='/logo_sw.png' alt='abc' width={180} height={50} />   
+        {/* <img src='/logo_sw.png' alt='abc' width={180} height={50} />    */}
         </Link>
         <div className={styles.logoArea}>Ponto dos Pets</div>
         <NavBar />
